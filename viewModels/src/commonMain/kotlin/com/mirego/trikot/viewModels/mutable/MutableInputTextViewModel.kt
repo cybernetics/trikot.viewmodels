@@ -16,7 +16,7 @@ open class MutableInputTextViewModel : MutableViewModel(), InputTextViewModel {
 
     override var placeholderText = PropertyFactory.create("")
 
-    override var editorAction = PropertyFactory.never<InputTextEditorAction>()
+    override var editorAction = PropertyFactory.create(InputTextEditorAction.None)
 
     override fun setUserInput(value: String) {
         userInput.value = value
